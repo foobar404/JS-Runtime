@@ -4,25 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script defer src="./js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
     <title>JS Runtime</title>
   </head>
 
   <body>
-    <header>
-      <h1>JS Runtime Calculator</h1>
-      <nav></nav>
-    </header>
+    <div id="wrapper">
+      <header>
+        <h1>calc.js</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+        </nav>
+      </header>
 
-    <main>
-      <section>
-        <textarea>hello world</textarea>
+      <main>
+        <section id="code">
+          <textarea>hello world</textarea>
 
-        <button>Save</button>
-        <button>Run</button>
-        <button></button>
-      </section>
-    </main>
+          <div>
+            <button id="save">Save</button>
+            <button id="run">Run</button>
+          </div>
+        </section>
+      </main>
 
-    <footer></footer>
+      <footer></footer>
+    </div>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </body>
 </html>

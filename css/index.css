@@ -1,1 +1,38 @@
 /* index.css */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* is this a reset? */
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  background-color: red;
+}
+
+#code {
+  width: 70%;
+  height: 60%;
+}
