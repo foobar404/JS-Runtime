@@ -59,10 +59,24 @@ main {
 textarea {
   width: 100%;
   height: 80%;
+  resize: none;
 }
 
 button {
+  margin-top: 1%;
   padding: 14px 30px;
   border: none;
   color: #fff;
+  background: var(--color1);
+  margin-left: 20px;
+}
+
+button:hover {
+  background: black;
+  cursor: pointer;
+}
+
+#output {
+  font-size: 40px;
+  color: var(--color1);
 }

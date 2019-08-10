@@ -1,11 +1,13 @@
 var output = document.querySelector("#output");
+
 document.querySelector("#save").onclick = e => {
   alert("click");
 };
-
 document.querySelector("#run").onclick = e => {
-  document.querySelector("#output").innerHTML = runAndMeasure(e);
+  output.innerHTML = runAndMeasure(e);
 };
+
+document.querySelector("#add").onclick = e => {};
 
 function runAndMeasure() {
   var code = document.querySelector("#sandbox").value;
@@ -23,14 +25,4 @@ function runAndMeasure() {
   return `The script took ${end - start} miliseconds.`;
 }
 
-// function fib(n) {
-//     let result;
-//     if (n === 1 || n === 2) {
-//       result = 1;
-//     } else {
-//       result = fib(n - 1) + fib(n - 2);
-//     }
-//     return result;
-//   }
-
-//   console.log(fib(35));
+//var newBlock document.createElement("textarea")
