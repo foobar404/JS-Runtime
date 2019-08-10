@@ -6,28 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script defer src="./js/index.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>JS Runtime</title>
+
 </head>
 
 <body>
     <div id="wrapper">
         <header>
-            <h1><a href="#">Javascript Runtime ⏰</a></h1>
+            <h1><a href="https://github.com/foobar404/JS-Runtime">Javascript ⏰ Runtime</a></h1>
             <nav>
-                <a href="index.html">Home</a>
+                <a href="https://github.com/foobar404/JS-Runtime">GitHub</a>
                 <a href="https://github.com/foobar404/JS-Runtime/blob/master/README.md">About</a>
             </nav>
         </header>
 
         <main>
-            <span id="output">Output goes here</span>
+
             <section id="code">
-                <textarea class="sandbox">Enter your code here...</textarea>
-                <button id="add"></button>
+                <div id="codebox-container">
+                    <div class="codebox">
+                        <textarea class="codebox-text">Enter your code here...</textarea>
+                        <span class="output">Output goes here</span>
+                    </div>
+                    <div class="codebox">
+                        <textarea class="codebox-text">Enter your code here...</textarea>
+                        <span class="output">Output goes here</span>
+                    </div>
+                    <div class="codebox">
+                        <textarea class="codebox-text">Enter your code here...</textarea>
+                        <span class="output">Output goes here</span>
+                    </div>
+                    <div class="codebox">
+                        <textarea class="codebox-text ">Enter your code here...</textarea>
+                        <span class="output">Output goes here</span>
+                    </div>
+                </div>
             </section>
+
             <div>
+                <button id="add">+</button>
                 <button id="save">Save</button>
                 <button id="run">Run</button>
             </div>
@@ -37,7 +58,6 @@
         <footer></footer>
     </div>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </body>
 
 </html>
