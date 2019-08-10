@@ -1,7 +1,7 @@
 var output = document.querySelector("#output");
 
 document.querySelector("#save").onclick = e => {
-  alert("click");
+  alert("this actually doesn't save shit yet");
 };
 document.querySelector("#run").onclick = e => {
   output.innerHTML = runAndMeasure(e);
