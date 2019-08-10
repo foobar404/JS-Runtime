@@ -9,8 +9,13 @@ document.querySelector("#run").onclick = e => {
 
 document.querySelector("#add").onclick = addCode(e);
 
-function addCode(e){
-  var document.querySelector("#codebox-container")
+function addCode(e) {
+  var container = document.querySelector("#codebox-container");
+
+  container.innerHTML += `<div class="codebox">
+    <textarea class="codebox-text">Enter your code here...</textarea>
+    <span class="output">Output goes here</span>
+  </div>`;
 }
 
 function runAndMeasure() {
