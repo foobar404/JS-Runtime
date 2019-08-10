@@ -7,7 +7,11 @@ document.querySelector("#run").onclick = e => {
   output.innerHTML = runAndMeasure(e);
 };
 
-document.querySelector("#add").onclick = e => {};
+document.querySelector("#add").onclick = addCode(e);
+
+function addCode(e){
+  var document.querySelector("#codebox-container")
+}
 
 function runAndMeasure() {
   var code = document.querySelector(".sandbox").value;
