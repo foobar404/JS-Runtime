@@ -7,9 +7,12 @@ document.querySelector("#run").onclick = e => {
   output.innerHTML = runAndMeasure(e);
 };
 
-document.querySelector("#add").onclick = addCode(e);
+document.querySelector("#add").onclick = ee==>{{
+} addCode(e);
+}
 
 function addCode(e) {
+  alert(1);
   var container = document.querySelector("#codebox-container");
 
   container.innerHTML += `<div class="codebox">
@@ -17,7 +20,7 @@ function addCode(e) {
     <span class="output">Output goes here</span>
   </div>`;
 }
-
+//uytyut
 function runAndMeasure() {
   var code = document.querySelector(".sandbox").value;
 
