@@ -6,11 +6,17 @@ const container = document.querySelector("#codebox-container");
 document.querySelector("#run").onclick = e => runAndMeasure(e);
 document.querySelector("#add").onclick = e => addCode(e);
 
-for(let child of container.children){
-  CodeMirror(child.children[0],{
-    value:"for(var i = 1;i<=100000;i++){}"
-  });
-}
+CodeMirror(container.children[0].children[0],{
+  value:"for(var i = 1;i<=100000;i++){}",
+  lineNumbers: true,
+  autofocus:true
+});
+CodeMirror(container.children[1].children[0],{
+  value:"for(var i = 1;i<=100000;i++){}",
+  lineNumbers: true
+});
+
+
 
 //FUNCTIONS
 function addCode(e) {
@@ -20,7 +26,8 @@ function addCode(e) {
   </div>`;
 
   CodeMirror(container.lastChild.children[0],{
-    value:"for(var i = 1;i<=100000;i++){}"
+    value:"for(var i = 1;i<=100000;i++){}",
+    lineNumbers: true
   });
 }
 
