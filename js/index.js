@@ -1,26 +1,34 @@
-var output = document.querySelector(".output");
+//VARIABLES
+const container = document.querySelector("#codebox-container");
 
-document.querySelector("#save").onclick = e => {
-  alert("this actually doesn't save shit yet");
-};
+// EVENT LISTENERS
+// document.querySelector("#save").onclick = e => alert("saving");
 document.querySelector("#run").onclick = e => runAndMeasure(e);
-
 document.querySelector("#add").onclick = e => addCode(e);
 
-function addCode(e) {
-  var container = document.querySelector("#codebox-container");
-
-  container.innerHTML += `<div class="codebox">
-    <textarea class="codebox-text" placeholder="Enter your code here..."></textarea>
-    <span class="output"></span>
-  </div>`;
+for(let child of container.children){
+  CodeMirror(child.children[0],{
+    value:"for(var i = 1;i<=100000;i++){}"
+  });
 }
 
-//connection
+//FUNCTIONS
+function addCode(e) {
+  container.innerHTML += `<div class="codebox">
+    <div contenteditable="true" class="codebox-text" placeholder="Enter your code here..."></div>
+    <span class="output"></span>
+  </div>`;
+
+  CodeMirror(container.lastChild.children[0],{
+    value:"for(var i = 1;i<=100000;i++){}"
+  });
+}
+
 function runAndMeasure() {
   let elms = document.querySelectorAll(".codebox");
   elms.forEach(e => {
-    let code = e.children[0].value; //textarea
+    console.log(e.children)
+    let code = e.children[0].innerText; //code
     let out = e.children[1]; //span output
 
     //performance.now
@@ -38,5 +46,13 @@ function runAndMeasure() {
   });
 }
 
-// for(var i = 1;i<=100000;i++){
-// }
+// TEST CODE
+/*
+ for(var i = 1;i<=100000;i++){}
+
+
+  for(var i = 1;i<=900000;i++){
+ }
+
+
+*/
