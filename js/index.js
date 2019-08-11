@@ -1,21 +1,19 @@
 //VARIABLES
 const container = document.querySelector("#codebox-container");
-var textEditors = [];
+let theme = "base16-light";
 
 //SYNCHRONOUS CODE
-var editor1 = CodeMirror(container.children[0].children[0], {
+CodeMirror(container.children[0].children[0], {
   value: "for(var i = 1;i<=100000;i++){}",
   lineNumbers: true,
   autofocus: true,
-  theme: "base16-light"
+  theme: theme
 });
-var editor2 = CodeMirror(container.children[1].children[0], {
+CodeMirror(container.children[1].children[0], {
   value: "for(var i = 1;i<=100000;i++){}",
   lineNumbers: true,
-  theme: "base16-light"
+  theme: theme
 });
-
-textEditors.push(editor1, editor2);
 
 // EVENT LISTENERS
 // document.querySelector("#save").onclick = e => alert("saving");
@@ -33,6 +31,7 @@ function makeDark(e) {
     codeMirror.classList.remove("cm-s-base16-light");
     codeMirror.classList.add("cm-s-base16-dark");
   }
+  theme = "base16-dark";
 }
 
 function makeLight(e) {
@@ -43,21 +42,26 @@ function makeLight(e) {
     codeMirror.classList.remove("cm-s-base16-dark");
     codeMirror.classList.add("cm-s-base16-light");
   }
+
+  theme = "base16-light";
 }
 
 function addCode(e) {
-  container.innerHTML += `<div class="codebox">
-    <div contenteditable="true" class="codebox-text" placeholder="Enter your code here..."></div>
-    <span class="output"></span>
-  </div>`;
+  var codebox = document.createElement("div");
+  codebox.classList.add("codebox");
+  var codebox_text = document.createElement("div");
+  codebox_text.classList.add("codebox-text");
+  var output = document.createElement("span");
+  output.classList.add("output");
+  codebox.appendChild(codebox_text);
+  codebox.appendChild(output);
+  container.appendChild(codebox);
 
-  var editor = CodeMirror(container.lastChild.children[0], {
+  CodeMirror(codebox_text, {
     value: "for(var i = 1;i<=100000;i++){}",
     lineNumbers: true,
-    theme: "base16-light"
+    theme: theme
   });
-
-  textEditors.push(editor);
 
   window.scrollTo(0, document.body.scrollHeight);
 }
