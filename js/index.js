@@ -1,22 +1,19 @@
-var output = document.querySelector(".output");
+//VARIABLES
+const container = document.querySelector("#codebox-container");
 
-document.querySelector("#save").onclick = e => {
-  alert("this actually doesn't save shit yet");
-};
+// EVENT LISTENERS
+document.querySelector("#save").onclick = e => alert("saving");
 document.querySelector("#run").onclick = e => runAndMeasure(e);
-
 document.querySelector("#add").onclick = e => addCode(e);
 
+//FUNCTIONS
 function addCode(e) {
-  var container = document.querySelector("#codebox-container");
-
   container.innerHTML += `<div class="codebox">
-    <textarea class="codebox-text" placeholder="Enter your code here..."></textarea>
+    <div contenteditable="true" class="codebox-text" placeholder="Enter your code here..."></div>
     <span class="output"></span>
   </div>`;
 }
 
-//connection
 function runAndMeasure() {
   let elms = document.querySelectorAll(".codebox");
   elms.forEach(e => {
@@ -38,5 +35,14 @@ function runAndMeasure() {
   });
 }
 
-// for(var i = 1;i<=100000;i++){
-// }
+// TEST CODE
+/*
+ for(var i = 1;i<=100000;i++){
+ }
+
+
+  for(var i = 1;i<=900000;i++){
+ }
+
+
+*/

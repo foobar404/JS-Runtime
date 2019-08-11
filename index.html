@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script defer src="./js/index.js"></script>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>JS Runtime</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="wrapper">
-      <header>
-        <h1>
-          <a href="https://github.com/foobar404/JS-Runtime"
-            >Javascript ⏰ Runtime</a
+        <header>
+            <h1>
+                <a href="https://github.com/foobar404/JS-Runtime">Javascript ⏰ Runtime</a
           >
         </h1>
         <nav>
           <a href="https://github.com/foobar404/JS-Runtime">GitHub</a>
-          <a
-            href="https://github.com/foobar404/JS-Runtime/blob/master/README.md"
-            >About</a
+                <a href="https://github.com/foobar404/JS-Runtime/blob/master/README.md">About</a
           >
         </nav>
       </header>
@@ -41,24 +30,26 @@
       <main>
         <section id="codebox-container">
           <div class="codebox">
-            <textarea
+            <div
+              contenteditable="true"
               class="codebox-text"
               placeholder="Enter your code here..."
-            ></textarea>
+            ></div>
             <span class="output"></span>
           </div>
           <div class="codebox">
-            <textarea
+            <div
+              contenteditable="true"
               class="codebox-text"
               placeholder="Enter your code here..."
-            ></textarea>
+            ></div>
             <span class="output"></span>
           </div>
         </section>
 
         <div id="btn-container">
           <button id="add">+</button>
-          <button id="save">Save</button>
+          <!-- <button id="save">Save</button> -->
           <button id="run">Run</button>
         </div>
       </main>
