@@ -53,6 +53,4 @@ function runAndMeasure() {
 
   for(var i = 1;i<=900000;i++){
  }
-
-
 */
