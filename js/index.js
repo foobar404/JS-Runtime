@@ -3,38 +3,40 @@ var output = document.querySelector(".output");
 document.querySelector("#save").onclick = e => {
   alert("this actually doesn't save shit yet");
 };
-document.querySelector("#run").onclick = e => {
-  output.innerHTML = runAndMeasure(e);
-};
+document.querySelector("#run").onclick = e => runAndMeasure(e);
 
-document.querySelector("#add").onclick = ee==>{{
-} addCode(e);
-}
+document.querySelector("#add").onclick = e => addCode(e);
 
 function addCode(e) {
-  alert(1);
   var container = document.querySelector("#codebox-container");
 
   container.innerHTML += `<div class="codebox">
-    <textarea class="codebox-text">Enter your code here...</textarea>
-    <span class="output">Output goes here</span>
+    <textarea class="codebox-text" placeholder="Enter your code here..."></textarea>
+    <span class="output"></span>
   </div>`;
 }
-//uytyut
+
+//connection
 function runAndMeasure() {
-  var code = document.querySelector(".sandbox").value;
+  let elms = document.querySelectorAll(".codebox");
+  elms.forEach(e => {
+    let code = e.children[0].value; //textarea
+    let out = e.children[1]; //span output
 
-  //performance.now
-  let start = performance.now();
+    //performance.now
+    let start = performance.now();
 
-  try {
-    eval(code);
-  } catch (err) {
-    output.innerHTML = err;
-  }
+    try {
+      eval(code);
+    } catch (err) {
+      out.innerHTML = err;
+    }
 
-  let end = performance.now();
-  return `The script took ${end - start} miliseconds.`;
+    let end = performance.now();
+    let rtn = Math.floor(end - start);
+    out.textContent = `The script took ${rtn} miliseconds.`;
+  });
 }
 
-//var newBlock document.createElement("textarea")
+// for(var i = 1;i<=100000;i++){
+// }
