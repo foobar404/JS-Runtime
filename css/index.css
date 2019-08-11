@@ -1,127 +1,128 @@
 :root {
-    --color1: crimson;
-    --color2: ;
-    --color3: ;
+  --color1: crimson;
+  --color2: ;
+  --color3: ;
 }
-
 
 /* index.css */
 
 html,
 body {
-    height: 100%;
-    width: 100%;
-    font-family: "Muli", sans-serif;
+  height: 100%;
+  width: 100%;
+  font-family: "Muli", sans-serif;
 }
 
 #wrapper {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 header {
-    display: flex;
-    width: 100%;
-    background-color: var(--color1);
-    align-items: center;
-    justify-content: center;
-    min-height: 60px;
+  display: flex;
+  width: 100%;
+  background-color: var(--color1);
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
 }
 
-header>h1 {
-    margin-left: 10px;
-    font-size: 1.3rem;
-    white-space: nowrap;
-    width: fit-content;
+header > h1 {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  width: fit-content;
 }
 
 nav {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
-nav>* {
-    margin-right: 30px;
+nav > * {
+  margin-right: 30px;
 }
 
 a {
-    text-decoration: none;
-    color: #eee;
-    height: 100%;
+  text-decoration: none;
+  color: #eee;
+  height: 100%;
 }
 
 a:hover {
-    color: plum;
+  color: plum;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-
 
 /* code container styling */
 
 #codebox-container {
-    width: 60%;
-    min-height: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    flex-flow: row wrap;
-    margin-bottom: 300px;
+  width: 60%;
+  min-height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  flex-flow: row wrap;
+  margin-bottom: 300px;
 }
 
 #codebox-container .codebox {
-    margin-top: 5%;
-    display: flex;
-    height: 300px;
-    width: 45%;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 5%;
+  display: flex;
+  height: 300px;
+  width: 45%;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 /* buttons container */
 
 .codebox-text {
-    width: 100%;
-    height: 80%;
-    border: 2px solid #0003;
-    cursor: pointer;
-    padding-bottom: 60px;
+  width: 100%;
+  height: 80%;
+  border: 2px solid #0003;
+  cursor: pointer;
+  padding-bottom: 60px;
+}
+
+.codebox-text * {
+  font-size: 16px;
 }
 
 button {
-    margin-top: 1%;
-    padding: 14px 30px;
-    border: none;
-    color: #fff;
-    background: var(--color1);
-    margin-left: 20px;
+  margin-top: 1%;
+  padding: 14px 30px;
+  border: none;
+  color: #fff;
+  background: var(--color1);
+  margin-left: 20px;
 }
 
 button:hover {
-    background: black;
-    cursor: pointer;
+  background: black;
+  cursor: pointer;
 }
 
 #output {
-    font-size: 40px;
-    color: var(--color1);
+  font-size: 40px;
+  color: var(--color1);
 }
 
 #btn-container {
-    position: fixed;
-    bottom: 0;
-    padding-bottom: 30px;
-    width: 100%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 30px;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
 }
