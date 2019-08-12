@@ -5,6 +5,6 @@ Supports light/dark theme.
 
 # Authors:
 
-[Austin Michaud](https://foobar404.dev/)
+[Austin Michaud](https://foobar404.dev)<br>
 [Nicholas Gebhart](https://github.com/gebhartn)  
 [Kevin Afable](https://github.com/Vyraal1)
