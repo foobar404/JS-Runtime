@@ -13,3 +13,7 @@ Supports light/dark theme.
 
 - Async
 - Sandbox?
+- Styling
+  - More themes
+  - Global light/dark
+  - Picture of Kevin set to "hidden" for curious users
