@@ -9,11 +9,4 @@ Supports light/dark theme.
 [Nicholas Gebhart](https://github.com/gebhartn)  
 [Kevin Afable](https://github.com/Vyraal1)
 
-# To-do:
 
-- Async
-- Sandbox?
-- Styling
-  - More themes
-  - Global light/dark
-  - Picture of Kevin set to "hidden" for curious users
